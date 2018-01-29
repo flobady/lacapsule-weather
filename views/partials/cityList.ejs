@@ -1,0 +1,16 @@
+<ul class="list-group col-sm-12" style="margin-top: 20px">
+  <% if(user){
+    for(let city of user.cityList) {  %>
+    <li class="list-group-item"> <%= city.name %>
+      <img src=<%= city.weatherPicto %> width=50 height=50 >
+      <span class=""><%= city.weatherWord %></span>
+      <span class="badge badge-primary badge-pill"><%= city.minTemp %></span>
+      <span class="badge badge-primary badge-pill"><%= city.maxTemp %></span>
+
+      <form action="/city/delete" method="post">
+        <input name="id" value=<%=city.id%> type="hidden"/>
+        <button type="submit" class="btn btn-danger"><i class="fa fa-trash" aria-hidden="true"></i></button>
+      </form>
+    </li>
+    <%}}%>
+</ul>

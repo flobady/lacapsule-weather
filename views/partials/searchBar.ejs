@@ -1,0 +1,13 @@
+<% if(user){ %>
+<form class="form-inline" action="/city" method="post">
+  <div class="form-group mb-2">
+    <label for="staticEmail2" class="sr-only">Entrez une ville!!</label>
+    <input type="text" readonly class="form-control-plaintext" id="staticEmail2" value="Entrez une ville!!">
+  </div>
+  <div class="form-group mx-sm-3 mb-2">
+    <label for="inputPassword2" class="sr-only">Paris, Chicago, Berlin</label>
+    <input name="cityName" type="texte" class="form-control" id="inputPassword2" placeholder="Paris, Chicago, Berlin">
+  </div>
+  <button type="submit" class="btn btn-primary mb-2">Submit</button>
+</form>
+<%}%>
